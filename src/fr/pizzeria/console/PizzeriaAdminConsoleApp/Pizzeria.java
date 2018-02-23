@@ -1,6 +1,9 @@
 package fr.pizzeria.console.PizzeriaAdminConsoleApp;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
+
 
 import fr.pizzeria.model.pizza.Pizza;
 
@@ -12,31 +15,7 @@ public class Pizzeria {
 		Scanner questionUser = new Scanner(System.in);
 		int choix;
 		
-		Pizza[] lesPizzas = new Pizza[50];
 		
-		Pizza p0 = new Pizza("PEP","Pépéroni",12.50);
-			lesPizzas[0] = p0 ;
-		
-		Pizza p1 = new Pizza("MAR","Margherita",14.00);
-			 lesPizzas[1] = p1;
-		
-		Pizza p2 = new Pizza("REIN","La Reine",11.50);
-			lesPizzas[2]= p2;
-		
-		Pizza p3 = new Pizza("FRO","La 4 fromages",12.00);
-			 lesPizzas[3] = p3 ;
-		
-		Pizza p4 = new Pizza("CAN","La cannibale",12.50);
-			lesPizzas[4] = p4 ;
-		
-		Pizza p5 = new Pizza("SAV","La Savoyarge",13.00 );
-			lesPizzas[5] = p5 ;
-		
-		Pizza p6 = new Pizza("ORI","L'Orientale",13.50 );
-			 lesPizzas[6] = p6 ;
-		
-		Pizza p7 = new Pizza("IND","L'Indienne",14.00);
-			 lesPizzas[7] = p7;
 				
 				
 		do{
@@ -59,8 +38,8 @@ public class Pizzeria {
 		case 1 : 
 			System.out.println("1. Liste des pizzas ");
 			for(int i=0 ; i < Pizza.getCompteur(); i++){
-				if( lesPizzas[i] != null){
-				System.out.println(lesPizzas[i].getCode() + " -> "+ lesPizzas[i].getLibelle() +"("+ lesPizzas[i].getPrix() +")");
+				if( lesPizzas.get(i) != null){
+				System.out.println( lesPizzas.get(i).getCode() + " -> "+  lesPizzas.get(i).getLibelle() +"("+  lesPizzas.get(i).getPrix() +")");
 				}
 			}
 			
@@ -75,7 +54,7 @@ public class Pizzeria {
 			System.out.println("Veuillez saisir le prix :"+"\n");
 			double prix = questionUser.nextInt();
 			
-			lesPizzas[Pizza.getCompteur()] = new Pizza(code, nom, prix );
+			lesPizzas.add(new Pizza(code, nom, prix ));
 			
 			break;	
 		case 3 :
@@ -86,13 +65,13 @@ public class Pizzeria {
 			
 			do{
 				
-				if(codeP.equals(lesPizzas[j].getCode())) {
+				if(codeP.equals( lesPizzas.get(j).getCode())) {
 					System.out.println("Veuillez choisir le nouveau code  :"+"\n");
-					lesPizzas[j].setCode(questionUser.next());
+					 lesPizzas.get(j).setCode(questionUser.next());
 					System.out.println("Veuillez choisir le nouveau nom ( sans espace ) :"+"\n");
-					lesPizzas[j].setLibelle(questionUser.next());
+					 lesPizzas.get(j).setLibelle(questionUser.next());
 					System.out.println("Veuillez choisir le nouveau prix :"+"\n");
-					lesPizzas[j].setPrix(questionUser.nextDouble());
+					 lesPizzas.get(j).setPrix(questionUser.nextDouble());
 					laPizza = true;
 					
 				} j++;
@@ -104,16 +83,16 @@ public class Pizzeria {
 		case 4 :
 			System.out.println("Veuillez choisir la pizza à supprimer  :"+"\n");
 			for(int i=0 ; i < Pizza.getCompteur(); i++){
-				if( lesPizzas[i] != null){
-				System.out.println(lesPizzas[i].getCode() + " -> "+ lesPizzas[i].getLibelle() +"("+ lesPizzas[i].getPrix() +")");
+				if(  lesPizzas.get(i) != null){
+				System.out.println( lesPizzas.get(i).getCode() + " -> "+  lesPizzas.get(i).getLibelle() +"("+  lesPizzas.get(i).getPrix() +")");
 				}
 			}
 			String codeS = questionUser.next();
 				
 			do{
 				
-				if (codeS.equals(lesPizzas[j].getCode())){
-					lesPizzas[j] = null; 
+				if (codeS.equals( lesPizzas.get(j).getCode())){
+					 lesPizzas.remove(j); 
 					laPizza = true;							
 				}					
 			}
