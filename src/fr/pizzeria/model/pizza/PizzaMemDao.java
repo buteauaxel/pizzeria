@@ -1,13 +1,20 @@
 package fr.pizzeria.model.pizza;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
-public abstract class PizzaMemDao implements PizzaDao {
+public  class PizzaMemDao implements PizzaDao {
 	
-	public void init() {
-		List <Pizza> lesPizzas = new ArrayList <Pizza>();
+	List <Pizza> lesPizzas = new ArrayList <Pizza>();
+	
+	public PizzaMemDao() {
+		super();
 		
+	}
+
+	public void init() {
+					
 		Pizza p0 = new Pizza("PEP","Pépéroni",12.50);
 			lesPizzas.add(p0) ;
 		
@@ -31,45 +38,75 @@ public abstract class PizzaMemDao implements PizzaDao {
 		
 		Pizza p7 = new Pizza("IND","L'Indienne",14.00);
 			lesPizzas.add(p7);
-		
-	}
+			}
 
 	@Override
-	public List<Pizza> FindAllPizzas() {
-		// TODO Auto-generated method stub
-		return null;
+	public List<Pizza> findAllPizzas() {
+		
+		return lesPizzas;
 	}
 
 	@Override
 	public void saveNewPizza(Pizza pizza) {
-		// TODO Auto-generated method stub
+		lesPizzas.add(pizza);
 		
 	}
 
 	@Override
 	public void updatePizza(String codePizza, Pizza pizza) {
-		// TODO Auto-generated method stub
+		Pizza np = null;
+		np = FindPizzaByCode(codePizza);
+		np.setCode(pizza.getCode());
+		np.setLibelle(pizza.getLibelle());
+		np.setPrix(pizza.getPrix());
+		
 		
 	}
 
 	@Override
 	public void deletePizza(String codePizza) {
-		// TODO Auto-generated method stub
+		
+		Iterator <Pizza> iterator = lesPizzas.iterator();
+		
+		while ( iterator.hasNext()){
+			Pizza pa = iterator.next();
+			if(pa.getCode().equals(codePizza)){
+				iterator.remove();
+			}
+		} 
+					
 		
 	}
 
 	@Override
 	public Pizza FindPizzaByCode(String codePizza) {
-		// TODO Auto-generated method stub
-		return null;
+		Pizza trouver = null ;
+		Iterator <Pizza> iterator = lesPizzas.iterator();
+		
+		while(iterator.hasNext()){
+			Pizza p = iterator.next();
+			if(p.getCode().equals(codePizza)){
+			trouver = p; 
+			}
+		}
+		
+		return trouver;
 	}
 
 	@Override
 	public Boolean PizzaExists(String codePizza) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+		boolean exist = false;
+		Iterator <Pizza> iterator = lesPizzas.iterator();
+		
+		while(iterator.hasNext()){
+			Pizza p = iterator.next();
+			if(p.getCode().equals(codePizza)){
+				exist = true;
+			}	
+	}return exist;
 
 	
 
 }
+}
+
