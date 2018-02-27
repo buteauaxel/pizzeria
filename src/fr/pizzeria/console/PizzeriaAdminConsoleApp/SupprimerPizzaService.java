@@ -7,6 +7,11 @@ import fr.pizzeria.model.pizza.Pizza;
 import fr.pizzeria.model.pizza.PizzaDao;
 
 
+/**
+ * Classe qui permet de supprimer une pizza de la liste 
+ * @author Axel B.
+ *
+ */
 public class SupprimerPizzaService extends MenuService{
 
 	@Override

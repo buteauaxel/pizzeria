@@ -1,5 +1,13 @@
 package fr.pizzeria.model.pizza;
 
+import fr.pizzeria.utils.StringUtils;
+import fr.pizzeria.utils.ToString;
+
+/**
+ * @author Axel B.
+ *
+ */
+
 public class Pizza {
 	
 	/** id : int
@@ -10,16 +18,19 @@ public class Pizza {
 	/** code : String
 	 * 
 	 */
+	@ToString(before=" ", after="-> ")
 	String code;
 	
 	/** libelle : String
 	 * 
 	 */
+	@ToString(before=" " , after=" (")
 	String libelle;
 	
 	/** prix : double
 	 * 
 	 */
+	@ToString(before=" ", after = "€)")
 	double prix;
 	
 	/** categ : String
@@ -66,14 +77,21 @@ public class Pizza {
 	}
 	
 	
-
-
-	@Override
+	
+	/** Nouveau toString
+	 * 
+	 */
+	public String toString() {
+		return StringUtils.getStringValue(this);
+	}
+	
+	/** Ancien toString
+	 * @Override
 	public String toString() {
 		
 		return (code + " -> "  + libelle + " (" + prix  + ") " + categ);
 		
-	}
+	} */
 
 	/** Getter
 	 * @return the id

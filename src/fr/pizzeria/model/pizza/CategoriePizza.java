@@ -1,10 +1,8 @@
-/**
- * 
- */
+
 package fr.pizzeria.model.pizza;
 
 /**
- * @author ETY0002
+ * @author Axel B.
  *
  */
 public enum CategoriePizza {

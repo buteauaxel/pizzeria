@@ -1,6 +1,10 @@
 package fr.pizza.exception;
 
 
+/**
+ * @author Axel B.
+ *
+ */
 public class PizzaException extends Exception{
 
 	

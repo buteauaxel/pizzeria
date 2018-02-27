@@ -7,6 +7,10 @@ import fr.pizzeria.model.pizza.Pizza;
 import fr.pizzeria.model.pizza.PizzaDao;
 
 
+/**
+ * @author Axel B.
+ *
+ */
 public class AjouterPizzaService extends MenuService{
 
 	@Override

@@ -6,6 +6,10 @@ import fr.pizza.exception.PizzaException;
 import fr.pizzeria.model.pizza.PizzaDao;
 import fr.pizzeria.model.pizza.PizzaMemDao;
 
+/**
+ * @author Axel B.
+ *
+ */
 public class Pizzeria {
 
 	public static void main(String[] args) {
@@ -20,7 +24,7 @@ public class Pizzeria {
 		do {
 			
 		MenuService mS; 	
-		 	
+		 	/** Initialisation du tableau */
 		System.out.println("***** Pizzeria Administration *****"+"\n");
 		System.out.println("1. Liste des pizzas ");
 		System.out.println("2. Ajouter une nouvelle pizza");
@@ -29,6 +33,7 @@ public class Pizzeria {
 		System.out.println("99.Sortir ");
 		choix = questionUser.nextInt();
 		
+		/** Gere les erreurs de l'utilisateur sur executeUc() */
 		try
 	
 		{
@@ -36,7 +41,7 @@ public class Pizzeria {
 		mS.executeUC(questionUser, lesPizzas);
 	
 		}catch (PizzaException e){
-			System.err.println(e.getMessage());
+			System.err.println(e.getMessage()); /** Retourne un message d'erreur  en fonction du choix de l'utilisateur */
 			
 		}
 		} while ( choix != 99);

@@ -4,10 +4,16 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+/**Implémentation de PizzaDao qui stock en mémoire
+ * @author Axel B.
+ *
+ */
 public  class PizzaMemDao implements PizzaDao {
 	
+	/** lesPizzas : List<Pizza> */
 	List <Pizza> lesPizzas = new ArrayList <Pizza>();
 	
+	/** Constructeur */
 	public PizzaMemDao() {
 		super();
 		
@@ -24,7 +30,7 @@ public  class PizzaMemDao implements PizzaDao {
 		Pizza p2 = new Pizza("REIN","La Reine",11.50,"Viande");
 			lesPizzas.add(p2);
 		
-		Pizza p3 = new Pizza("FRO","La 4 fromages",12.00,"Viande");
+		Pizza p3 = new Pizza("FRO","La 4 fromages",12.00,"Sans viande");
 			lesPizzas.add(p3);
 		
 		Pizza p4 = new Pizza("CAN","La cannibale",12.50,"Viande");
@@ -36,7 +42,7 @@ public  class PizzaMemDao implements PizzaDao {
 		Pizza p6 = new Pizza("ORI","L'Orientale",13.50,"Viande" );
 			lesPizzas.add(p6);
 		
-		Pizza p7 = new Pizza("IND","L'Indienne",14.00,"Viande");
+		Pizza p7 = new Pizza("IND","L'Indienne",14.00,"Poisson");
 			lesPizzas.add(p7);
 			}
 
