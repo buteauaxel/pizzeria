@@ -26,7 +26,7 @@ public class SupprimerPizzaService extends MenuService{
 		String codeS = scanner.next();
 		if (lesPizzas.PizzaExists(codeS)){	
 			lesPizzas.deletePizza(codeS);
-		}else{ throw new DeletePizzaException("Impossible de supprimer la pizza");
+		}else{ throw new DeletePizzaException("Impossible de supprimer la pizza");/** Si le code de la pizza n'existe pas, on ne peut pas la supprier */
 		}
 		
 		

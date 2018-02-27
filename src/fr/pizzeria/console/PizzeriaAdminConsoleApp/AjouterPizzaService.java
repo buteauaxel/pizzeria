@@ -7,7 +7,7 @@ import fr.pizzeria.model.pizza.Pizza;
 import fr.pizzeria.model.pizza.PizzaDao;
 
 
-/**
+/**Ajout d'une nouvelle pizza
  * @author Axel B.
  *
  */

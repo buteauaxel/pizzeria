@@ -6,7 +6,7 @@ import fr.pizza.exception.UpdatePizzaException;
 import fr.pizzeria.model.pizza.Pizza;
 import fr.pizzeria.model.pizza.PizzaDao;
 
-/**
+/**Met à jour une pizza en modifiant ses composants
  * @author Axel B.
  *
  */

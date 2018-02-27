@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-/**Implémentation de PizzaDao qui stock en mémoire
+/**Implémentation de PizzaDao qui gère les pizzas en mémoire
  * @author Axel B.
  *
  */

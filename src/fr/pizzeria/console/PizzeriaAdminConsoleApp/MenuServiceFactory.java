@@ -1,5 +1,7 @@
 package fr.pizzeria.console.PizzeriaAdminConsoleApp;
 
+import fr.pizza.exception.PizzaException;
+
 /**
  * @author Axel B.
  *
@@ -10,7 +12,7 @@ public class MenuServiceFactory extends Pizzeria {
 	 * @param choix
 	 * @return 
 	 */
-	public static MenuService getInstance(int choix) {
+	public static MenuService getInstance(int choix) throws PizzaException{
 			
 		MenuService mS = null; 
 		/** Switch permettant de suivre le choix de l'utilisateur */
@@ -31,11 +33,18 @@ public class MenuServiceFactory extends Pizzeria {
 		case 4 :
 			mS = new SupprimerPizzaService();/** Choix 4 : Permet de supprimer une pizza */
 			break;
+		
+		case 5 :
+			mS = new EnregistrerPdf();/** Enregistre la liste des pizzas en PDF */
+			
+			break;
 		case 99 :	
 			mS = new QuitterPizzeriaService();/** Choix 99 : Quitte l'application */
 			break;	
-			default :
-				
+			
+			default : throw new PizzaException("Une erreur est survenur lors de la saisie " +"\n" );
+					
+			
 				
 		} return mS; /** Retourne le choix de l'utilisateur */
 

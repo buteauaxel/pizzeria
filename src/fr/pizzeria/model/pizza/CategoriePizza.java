@@ -6,10 +6,27 @@ package fr.pizzeria.model.pizza;
  *
  */
 public enum CategoriePizza {
-	VIANDE ("Viande"), POISSON("Poisson"), SANS_VIANDE("Sans Viande");
+	/** VIANDE : CategoriePizza
+	 * 
+	 */
+	VIANDE ("Viande"), 
+	/** POISSON : CategoriePizza
+	 * 
+	 */
+	POISSON("Poisson"), 
+	/** SANS_VIANDE : CategoriePizza
+	 * 
+	 */
+	SANS_VIANDE("Sans Viande");
 	
+	/** categ : String
+	 * 
+	 */
 	private String categ;
 	
+	/** Constructor
+	 * @param categ
+	 */
 	private CategoriePizza (String categ){
 		this.categ = categ;
 	}

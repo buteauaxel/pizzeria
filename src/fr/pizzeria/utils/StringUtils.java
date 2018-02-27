@@ -5,13 +5,18 @@ package fr.pizzeria.utils;
 
 import java.lang.reflect.Field;
 
-/**
+/** Classe utilitaire qui fournit des services de génération / conversion de chaine de caractère
  * Nouvelle méthode toString
  * 
  * @author Axel B.
  *
  */
 public class StringUtils {
+	
+	/**Methode qui converti un objet en chaine de caractère
+	 * @param object
+	 * @return
+	 */
 	public static String getStringValue(Object object){
 		
 		String chaine = "";
@@ -38,9 +43,7 @@ public class StringUtils {
 					
 					
 					chaine += value;
-				}}return chaine;}catch(
-
-	Exception e)
+				}}return chaine;}catch(Exception e)
 	{
 		return null;
 
