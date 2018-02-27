@@ -2,7 +2,6 @@ package fr.pizzeria.console.PizzeriaAdminConsoleApp;
 
 import java.util.Scanner;
 
-import fr.pizza.exception.PizzaException;
 import fr.pizza.exception.UpdatePizzaException;
 import fr.pizzeria.model.pizza.Pizza;
 import fr.pizzeria.model.pizza.PizzaDao;
@@ -25,11 +24,19 @@ public class ModifierPizzaService extends MenuService{
 				String nom = questionUser.next();
 				System.out.println("Veuillez choisir le nouveau prix :"+"\n");
 				 double prix = questionUser.nextDouble();
-				 lesPizzas.updatePizza( codeP , new Pizza (code, nom, prix));
-			}else{
-				 
-				 throw new UpdatePizzaException("Impossible de modifer la pizza");	}
+				 System.out.println("Veuillez choisir la nouvelle catégorie :"+"\n");
+				 String categ = questionUser.next();
+				 lesPizzas.updatePizza( codeP , new Pizza (code, nom, prix,categ));
+			}else	{			 
+				 throw new UpdatePizzaException("Impossible de modifer la pizza, le code est erroné");	}
 
+			
+			
+			
+			
+			
+			
+			
 	}
 
 

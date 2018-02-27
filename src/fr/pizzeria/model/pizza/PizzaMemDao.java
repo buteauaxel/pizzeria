@@ -15,28 +15,28 @@ public  class PizzaMemDao implements PizzaDao {
 
 	public void init() {
 					
-		Pizza p0 = new Pizza("PEP","Pépéroni",12.50);
+		Pizza p0 = new Pizza("PEP","Pépéroni",12.50,"Viande");
 			lesPizzas.add(p0) ;
 		
-		Pizza p1 = new Pizza("MAR","Margherita",14.00);
+		Pizza p1 = new Pizza("MAR","Margherita",14.00,"Viande");
 			 lesPizzas.add(p1);
 		
-		Pizza p2 = new Pizza("REIN","La Reine",11.50);
+		Pizza p2 = new Pizza("REIN","La Reine",11.50,"Viande");
 			lesPizzas.add(p2);
 		
-		Pizza p3 = new Pizza("FRO","La 4 fromages",12.00);
+		Pizza p3 = new Pizza("FRO","La 4 fromages",12.00,"Viande");
 			lesPizzas.add(p3);
 		
-		Pizza p4 = new Pizza("CAN","La cannibale",12.50);
+		Pizza p4 = new Pizza("CAN","La cannibale",12.50,"Viande");
 			lesPizzas.add(p4);
 		
-		Pizza p5 = new Pizza("SAV","La Savoyarge",13.00 );
+		Pizza p5 = new Pizza("SAV","La Savoyarge",13.00,"Viande" );
 			lesPizzas.add(p5);
 		
-		Pizza p6 = new Pizza("ORI","L'Orientale",13.50 );
+		Pizza p6 = new Pizza("ORI","L'Orientale",13.50,"Viande" );
 			lesPizzas.add(p6);
 		
-		Pizza p7 = new Pizza("IND","L'Indienne",14.00);
+		Pizza p7 = new Pizza("IND","L'Indienne",14.00,"Viande");
 			lesPizzas.add(p7);
 			}
 

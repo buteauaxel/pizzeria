@@ -24,8 +24,10 @@ public class AjouterPizzaService extends MenuService{
 		String no = scanner.next();
 		System.out.println("Veuillez saisir le prix :"+"\n");
 		double p = scanner.nextInt();
+		System.out.println("Veuillez choisir la catégorie :"+"\n");
+		String cat = scanner.next();
 		if (!lesPizzas.PizzaExists(co)){
-		lesPizzas.saveNewPizza(new Pizza(co, no, p ));
+		lesPizzas.saveNewPizza(new Pizza(co, no, p , cat));
 		}else{
 		throw new SavePizzaException("Impossible d'ajouter la pizza");
 		}

@@ -11,14 +11,14 @@ public class SupprimerPizzaService extends MenuService{
 
 	@Override
 	public void executeUC(Scanner scanner,PizzaDao lesPizzas) throws DeletePizzaException{
-		Scanner questionUser = new Scanner(System.in);
+		
 		 
 		System.out.println("Veuillez choisir la pizza à supprimer  :"+"\n");
 		for(Pizza pizza: lesPizzas.findAllPizzas()){
 			System.out.println(pizza);
 		};
 		
-		String codeS = questionUser.next();
+		String codeS = scanner.next();
 		if (lesPizzas.PizzaExists(codeS)){	
 			lesPizzas.deletePizza(codeS);
 		}else{ throw new DeletePizzaException("Impossible de supprimer la pizza");

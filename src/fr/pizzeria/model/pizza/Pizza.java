@@ -22,7 +22,13 @@ public class Pizza {
 	 */
 	double prix;
 	
+	/** categ : String
+	 * 
+	 */
+	String categ;
+	
 	static int compteur=0;
+	
 	
 	
 	/** Constructor
@@ -30,27 +36,31 @@ public class Pizza {
 	 * @param code
 	 * @param libelle
 	 * @param prix
+	 * @param categ
 	 */
-	public Pizza(int id, String code, String libelle, double prix) {
+	public Pizza(int id, String code, String libelle, double prix, String categ) {
 		super();
 		this.id = id;
 		this.code = code;
 		this.libelle = libelle;
 		this.prix = prix;
+		this.categ=categ;
 	}
 	
 	/** Constructor
 	 * @param code
 	 * @param libelle
 	 * @param prix
+	 * @param categ
 	 */
-	public Pizza(String code, String libelle, double prix) {
+	public Pizza(String code, String libelle, double prix, String categ) {
 		super();
 		
 		
 		this.code = code;
 		this.libelle = libelle;
 		this.prix = prix;
+		this.categ=categ;
 		this.id=compteur;
 		compteur++;
 	}
@@ -61,7 +71,7 @@ public class Pizza {
 	@Override
 	public String toString() {
 		
-		return (code + " -> "  + libelle + " (" + prix  + ")");
+		return (code + " -> "  + libelle + " (" + prix  + ") " + categ);
 		
 	}
 
