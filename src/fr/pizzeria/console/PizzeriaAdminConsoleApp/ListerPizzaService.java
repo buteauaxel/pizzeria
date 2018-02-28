@@ -5,6 +5,10 @@ import java.util.Scanner;
 import fr.pizzeria.model.pizza.Pizza;
 import fr.pizzeria.model.pizza.PizzaDao;
 
+/**Classe qui permet d'afficher toute les pizzas de la liste lesPizzas
+ * @author Axel B.
+ *
+ */
 public class ListerPizzaService extends MenuService{
 
 	@Override

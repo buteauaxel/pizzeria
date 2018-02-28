@@ -8,7 +8,7 @@ import fr.pizzeria.model.pizza.Pizza;
 import fr.pizzeria.model.pizza.PizzaDao;
 import fr.pizzeria.utils.PDFGenerator;
 
-/**
+/** Classe qui enregistre un PDF
  * @author Axel B.
  *
  */

@@ -13,7 +13,7 @@ public  class PizzaMemDao implements PizzaDao {
 	/** lesPizzas : List<Pizza> */
 	List <Pizza> lesPizzas = new ArrayList <Pizza>();
 	
-	/** Constructeur */
+	/** Constructor */
 	public PizzaMemDao() {
 		super();
 		

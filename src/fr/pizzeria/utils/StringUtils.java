@@ -13,7 +13,7 @@ import java.lang.reflect.Field;
  */
 public class StringUtils {
 	
-	/**Methode qui converti un objet en chaine de caractère
+	/** Methode qui converti un objet en chaine de caractère
 	 * @param object
 	 * @return
 	 */

@@ -5,6 +5,10 @@ import java.util.Scanner;
 
 import fr.pizzeria.model.pizza.PizzaDao;
 
+/** Permet de quitter l'application
+ * @author Axel B.
+ *
+ */
 public class QuitterPizzeriaService extends MenuService{
 
 	@Override

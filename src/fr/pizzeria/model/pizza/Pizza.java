@@ -30,12 +30,13 @@ public class Pizza {
 	/** prix : double
 	 * 
 	 */
-	@ToString(before=" ", after = "€)")
+	@ToString(before=" ", after = "€) ->")
 	double prix;
 	
 	/** categ : String
 	 * 
 	 */
+	@ToString(before="  ",after ="")
 	String categ;
 	
 	static int compteur=0;
